@@ -1,0 +1,45 @@
+{
+  "number_of_trips_less_than_5dollar" : {"total_amount": {"$lt":5}},
+  "average_tip_amount_pipeline" : [
+    {
+        "$group": {
+            "_id": null,
+            "average_tip_amount": {
+                "$avg": "$tip_amount"
+            }
+        }
+    }
+] ,
+"trip_amount_per_hour_pipeline" :  [
+        {
+        "$group": {
+            "_id": {
+                "$hour": "$tpep_pickup_datetime"
+            },
+            "trip_amount_per_hour": {
+                "$sum": "$total_amount"
+            }
+        }
+    }
+] ,
+  "min_date":  [
+    {
+        "$group": {
+            "_id": {},
+            "minDate": {
+                "$min": "$tpep_pickup_datetime"
+            }
+        }
+    }
+],
+  "max_date":  [
+    {
+        "$group": {
+            "_id": {},
+            "maxDate": {
+                "$max": "$tpep_pickup_datetime"
+            }
+        }
+    }
+]
+}

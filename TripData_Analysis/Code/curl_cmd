@@ -1,0 +1,6 @@
+curl --location --request POST 'http://127.0.0.1:5051/trip_data_analysis' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "DB_NAME": "TRIP_DATA",
+    "COLLECTION_NAME": "TRIP_DATA_ANALYSIS"
+}'
