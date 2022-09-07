@@ -1,13 +1,14 @@
-import pandas as pd
+#Import required packages
 from imports import *
 from utilities import *
 
+#Initialise Flask object
 app = Flask(__name__)
 
 class TripDataAnalysisV1():
     def __init__(self):
         '''
-        Initialise and read all configuration
+        Initialise and read all configuration parameters
         '''
         config = ConfigParser()
         config.read('../config/trip_data_analysis_config.ini')
