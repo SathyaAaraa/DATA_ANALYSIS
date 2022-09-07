@@ -94,7 +94,8 @@ def trip_data_analysis():
     #Log End Timestamp
     EndTimeStamp = datetime.now()
     print("EndTimestamp -> ", EndTimeStamp)
-    print((EndTimeStamp - StartTimeStamp).total_seconds())
+    
+    #Add time taken for analysis attribute to reponse dictionary
     response['Time taken for Analysis in seconds'] = round((EndTimeStamp - StartTimeStamp).total_seconds(), 2)
     return response
 
