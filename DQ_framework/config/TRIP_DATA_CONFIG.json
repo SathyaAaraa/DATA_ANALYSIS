@@ -1,0 +1,43 @@
+{
+    "FILENAME_PATTERN": "TripData.csv",
+    "FILE_TYPE" : "CSV",
+    "DELIMITER": ",",
+	"HEADER_REQUIRED":"YES",
+    "ERROR_FILE_PATH":"output/",
+    "FILE_HEADER": [
+        "VendorID",
+        "tpep_pickup_datetime",
+        "tpep_dropoff_datetime",
+        "passenger_count",
+        "trip_distance",
+        "RatecodeID",
+        "store_and_fwd_flag",
+        "PULocationID",
+        "DOLocationID",
+        "payment_type",
+        "fare_amount",
+        "extra",
+        "mta_tax",
+        "tip_amount",
+        "tolls_amount",
+        "improvement_surcharge",
+        "total_amount",
+        "congestion_surcharge"
+    ],
+    "TABLESTRUCTURE": {
+    },
+    "COLUMNVALIDATOR": {
+        "tpep_pickup_datetime": {
+            "TYPE": "DATETIME",
+            "FORMAT": "%Y-%m-%d %H:%M"
+        },
+        "tip_amount": {
+            "TYPE": "VARCHAR",
+            "FORMAT": "^[0-9\\.]*$"
+        },
+        "total_amount": {
+            "TYPE": "VARCHAR",
+            "FORMAT": "^[0-9\\.]*$"
+        }
+    }
+}
