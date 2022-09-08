@@ -1,0 +1,4 @@
+column_NAME,total records,valid_record_count,invalid_record_count,Allowed_bad_record_limit,DQ-True/FALSE
+DQ_CHECK_ONtpep_pickup_datetime,1048575,1048575,0,262143,True
+DQ_CHECK_ONtip_amount,1048575,1048538,37,262143,True
+DQ_CHECK_ONtotal_amount,1048575,1045077,3498,262143,True
